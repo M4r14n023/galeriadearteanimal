@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body-index{
+    background-color: gainsboro;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-image: url(https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+th{
+    color: #fff;
+    font-weight:bolder;
+}
+td{
+    color: #fff;
+    font-weight:bolder;
+}
+.container {
+  /* background-color: #fff; */
+  padding: 20px;
+  border-radius: 70px;
+  border-color: black;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  font-weight: bolder;
+  justify-content: space-between;
+
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    width: 100%;
+}
+
+.a-button{
+    color: #fff;
+}
+
+/* Estilo para el botón */
+
+/* Contenedor para centrar */
+.button-container {
+   align-items: center;
+   text-align: center;
+   /* display: flex; */
+   justify-content:center;
+
+}
+button {
+  border: 0;
+  background-image: linear-gradient(150deg, #9500, #09f, #00ddff);
+  border-radius: 8px;
+  color: white;
+  /* display: flex; */
+  font-size: 18px;
+  letter-spacing: 3px;
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+button span {
+  background: linear-gradient(45deg, #0000FF, #4169E1, #00BFFF, #4169E1, #0000FF, #4169E1, #00BFFF, #4169E1);
+  padding: 7px 17px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+button:hover span {
+  background: none;
+  color: black;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: aliceblue;
+  /* background-color: #f1f1f1; */
+}
+
+/* .carousel-image {
+  height: 80vh; 
+  width: 100vh;
+} */
+.carousel-inner img {
+  object-fit: cover; /* Hace que la imagen cubra el contenedor manteniendo su proporción */
+  object-position: center; /* Centra la imagen dentro del contenedor */
+  height: 600px; /* Altura fija para todas las imágenes */
+  width: 100%; /* Ancho del 100% del contenedor */
+}
+
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto de la leyenda */
+  color: white; /* Color del texto de la leyenda */
+  text-align: center; /* Centra el texto */
+  padding: 20px; /* Espaciado interno para la leyenda */
+}

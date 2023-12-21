@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Galeria de Arte Animal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <script>
+      function mostrarAlerta() {
+        Swal.fire({
+          title: "Acceso no permitido",
+          text: "Solo con Clave Administrador",
+          icon: "error",
+        });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </head>
+
+  <body>
+
+    <h2 class="border">GALERIA DE ARTE ANIMAL</h2>
+    <h2 class="wave">GALERIA DE ARTE ANIMAL</h2>
+
+    <a href="./templates/login.html" class="btn-neon">
+      <span id="span1"></span>
+      <span id="span2"></span>
+      <span id="span3"></span>
+      <span id="span4"></span>
+      INGRESAR
+  </a>
+
+    <footer class="footer-index" id="footer"></footer>
+
+    <script src="./js/main.js"></script>
+
+  </body>
+</html>

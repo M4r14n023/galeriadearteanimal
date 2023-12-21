@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Agrega los enlaces a los estilos de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <title>Animales</title>
+  </head>
+  <body class="body">
+    <header id="header"></header>
+    <main>
+      <div id="app" class="container">
+        <h1>Listado de Fotografias</h1>
+        <br />
+        <a class="btn btn-primary" href="upload.html">Nueva Fotografia</a>
+        <br /><br />
+        <div v-if="error">
+          <p>Lo sentimos , ........</p>
+        </div>
+        <div v-else>
+          <section v-if="cargando">
+            <div class="spinner-border"></div>
+            <p>Cargando .....</p>
+          </section>
+          <section v-else>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Animal</th>
+                    <th scope="col">Ubicacion</th>
+                    <th scope="col">Artista</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Seleccione opcion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="" v-for="animal in animales">
+                    <td scope="row">{{animal.id}}</td>
+                    <td>{{animal.especie}}</td>
+                    <td>{{animal.ubicacion}}</td>
+                    <td>{{animal.artista}}</td>
+                    <td>
+                      <img
+                        width="80"
+                        :src="animal.imagen"
+                        :alt="animal.especie"
+                      />
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-primary">
+                        <a class="a-button" :href="'update.html?id='+ animal.id"
+                          >Editar</a
+                        >
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-danger"
+                        v-on:click="eliminar(animal.id)"
+                      >
+                        Eliminar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+
+    <!--Link de Bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <!--Link de VUE-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/animales.js"></script>
+
+    <!-- Agrega los scripts de Bootstrap (jQuery y Popper.js son requeridos) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

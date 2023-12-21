@@ -1,0 +1,154 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    background-image: url("https://cdn.pixabay.com/photo/2017/10/24/18/27/lion-2885618_1280.jpg");
+    background-repeat: no-repeat;
+    background-size:auto;
+    display: flex;
+    height: 100vh; 
+    width: 100vw; 
+    align-items: center;
+    justify-content: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+h2{
+  font-size: 7rem;
+  position: absolute;
+  /* align-items: center;
+  justify-content: center; */
+  }
+
+.border{
+  color: black;
+  text-shadow: 
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      1px 1px 0 white,
+      -1px 1px 0 white
+}
+
+.wave{
+  color: #09f;
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave{
+  0%, 100%{
+    clip-path: polygon(
+      0% 47%,
+      10% 48%,
+      33% 54%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+50%{
+  clip-Path: polygon(
+    0% 60%,
+    15% 65%,
+    34% 66%,
+    51% 62%,
+    67% 50%,
+    84% 45%,
+    100% 46%,
+    100% 100%,
+    0% 100%
+    );
+  }
+}
+
+.footer-index{
+    color: aliceblue;
+}
+
+.btn-neon{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a0321;
+    font-family:consolas;
+}
+
+
+.btn-neon {
+    position: fixed;
+    top: 20px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+    right: 20px; /* Ajusta la distancia desde la derecha según tus necesidades */
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    background: #1a0321;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn-neon:hover{
+    background: #09f;
+    box-shadow: 0 0 10px #09f, 0 0 40px #09f, 0 0 80px #09f;
+    transition-delay: 1s;
+ }
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#09f);
+ }
+ .btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#09f);
+}
+ .btn-neon:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#09f);
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#09f);
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
