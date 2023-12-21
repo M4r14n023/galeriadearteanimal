@@ -1,2 +1,7 @@
 # created by virtualenv automatically
 
+# .gitignore
+
+# Python
+*.pyc
+__pycache__/
